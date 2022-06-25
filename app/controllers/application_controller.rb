@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   # an array of `CATEGORY` instances (e.g., particular museums, or particular
   # restaurants, etc.) that are located in the given place type. A maximum of
   # `LIMIT` category instances are included.
-  def display
+  def generate_json
     # If path is 'museums', category will be 'museum'
     category = params[:category].singularize
     parsed_response = JSON.parse(call_geocoding_api(category))
