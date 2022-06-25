@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Since this app has no models, I've coded the `display` action directly in the
-# application controller.
+# Since this app has no models, I've coded the `generate_json` action directly
+# in the application controller.
 class ApplicationController < ActionController::Base
   require 'json'
   require 'open-uri'
