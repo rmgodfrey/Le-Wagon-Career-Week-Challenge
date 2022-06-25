@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
     access_token = "access_token=#{ENV['MAPBOX_TOKEN']}"
     # Get as many results as possible for now, will be filtered down to `LIMIT`
     # by `group_by_place_type`
-    query_string = "type=poi&limit=10&#{proximity}&#{access_token}"
+    query_string = "types=poi&limit=10&#{proximity}&#{access_token}"
     URI.parse("#{GEOCODING_URL}#{category}.json?#{query_string}").open.read
   end
 
